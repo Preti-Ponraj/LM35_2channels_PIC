@@ -28,9 +28,9 @@ void delay(int ms)
 void enable()
 {
     EN=1;
-    delay(10);
+    delay(5);
     EN=0;
-    delay(10);
+    delay(5);
 }
 
 void command(char a)
@@ -99,7 +99,7 @@ void main(void)
         
         temp=adc(0x81);
         temp=adc(0x85);
-    if(temp>10.00)
+    if(temp>30.00)
     {
         PORTD=0x01;
     }
